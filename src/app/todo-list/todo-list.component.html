@@ -1,0 +1,15 @@
+<div>
+    <h3>number of task is {{todos.length}}</h3>
+    <div id="inputContainer">
+      <input id="inputFiled" [(ngModel)]="newTitle" placeholder="Enter task title" />
+      <button (click)="addTodo()">Add Task</button>
+    </div>
+    <h2>Todo List</h2>
+    <div id="AllTodo">
+        <div *ngFor="let todo of todos">
+            <app-todo-item [title]="todo.title" [progress]="todo.progress"></app-todo-item>
+          </div>
+    </div>
+    
+  </div>
+  
